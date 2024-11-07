@@ -1,0 +1,134 @@
+
+	<section class="parallax-window" data-parallax="scroll" data-image-src="img/headers/cuenta.jpg" data-natural-width="1400" data-natural-height="470" style="background-image: url('img/headers/cuenta.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+		<div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.4)">
+			<div class="animated fadeInDown">
+				<h1 id="nombre"></h1>
+				<p>Aquí se muestra tu información personal.</p>
+			</div>
+		</div>
+	</section>
+	<main>
+		<div id="position">
+			<div class="container">
+				<ul>
+					<li><a href="/home">Home</a>
+					</li>
+					<li>Cuenta</li>
+				</ul>
+			</div>
+		</div>
+		<!-- End Position -->
+		
+		<div class="margin_60 container">
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form_title">
+						<h3><strong><i class="icon-pencil"></i></strong>Tu Información</h3>
+						<p>
+							Revisa tus datos personales
+						</p>
+					</div>
+					<div class="step">
+						<table class="table table-striped">
+							<thead>
+								
+							</thead>
+							<tbody id="datosPersonales">
+							</tbody>
+						</table>
+						<hr>
+						<button type="button" class="btn" style="background-color: #99c21c; color: white;" onclick="editarFoto()">Guardar Fotografía</button>	
+					</div>
+				</div>
+				<div class="col-2">
+				</div>
+				<div class="col-md-4" style="display: flex; justify-content: center;">
+					<div class="box_style_1" style="width: 100%; margin: auto; height: 400px; overflow: hidden; text-align: center;">
+						<img id="imagePreview" src="img/usuario.jpg" alt="Image" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+						<a href="#" onclick="document.getElementById('fileInput').click(); return false" style="margin: 20px 0; text-align: center;">Añadir/Cambiar</a>
+					</div>
+				</div>
+				<input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="previewImage(event);"> <!-- Input oculto -->
+			</div>
+			<!-- End row -->
+
+			<div class="divider"></div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form_title">
+						<h3><strong><i class="icon-pencil"></i></strong>Editar Información</h3>
+						<p>
+							Edita tus datos personales
+						</p>
+					</div>
+					<div class="step">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Nombres</label>
+								<input class="form-control" name="first_name" id="nombres" type="text">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Apellidos</label>
+								<input class="form-control" name="last_name" id="apellidos" type="text">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Teléfono</label>
+								<input class="form-control" name="email_2" id="telefono" type="text">
+							</div>
+						</div>
+						<hr>
+						<button type="button" class="btn" style="background-color: #99c21c; color: white;" onclick="editarPerfil()">Editar Datos</button>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="form_title">
+						<h3><strong><i class="icon-pencil"></i></strong>Editar Contraseña</h3>
+						<p>
+							Edita tu contraseña
+						</p>
+					</div>
+					<div class="step">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Contraseña actual</label>
+								<input class="form-control" name="old_password" id="old_password" type="password">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Nueva contraseña</label>
+								<input class="form-control" name="new_password" id="new_password" type="password">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Confirmar nueva contraseña</label>
+								<input class="form-control" name="confirm_new_password" id="confirm_new_password" type="password">
+							</div>
+						</div>
+						<hr>
+						<button type="button" class="btn" style="background-color: #99c21c; color: white;" onclick="editarContrasena()">Editar Contraseña</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!-- end container -->
+	</main>
+	<script src="js/functions.js"></script>
+	<script src="js/modulos/cuenta.js"></script>
+	<script src="js/modulos/comun.js"></script>
+
+	<script>
+        $(document).ready(e => {
+            verificarDatos()
+        })
+    </script>
+	
+	

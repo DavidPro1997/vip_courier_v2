@@ -1,0 +1,66 @@
+
+<section class="parallax-window" data-parallax="scroll" data-image-src="img/header_bg.jpg" data-natural-width="1400" data-natural-height="470" style="background-image: url('https://aleximexpress.com/wp-content/uploads/2023/03/4-ventajas-de-usar-un-servicio-courier-1.jpg');">
+    <div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+        <div class="animated fadeInDown">
+            <h1>Registra tu paquete</h1>
+        </div>
+    </div>
+</section>
+    <!-- End section -->
+
+<main>
+    <div class="container margin_60">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form_title">
+                    <h3><strong><i class="icon-pencil"></i></strong>Formulario de ingreso</h3>
+                    <p>
+                        Llena el formulario de su paquete
+                    </p>
+                </div>
+                <div class="step">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Tracking ID</label>
+                                    <input type="text" class="form-control" id="tracking" name="name_contact" placeholder="Ingresa tu numero de tracking">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Recibo Paquete</label>
+                                    <input type="file" class="form-control" id="pdfInput" name="lastname_contact" placeholder="Ingresa tu recibo de tu paquete">
+                                </div>
+                            </div>
+                        
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Observaciones</label>
+                                    <textarea rows="5" id="observaciones" name="message_contact" class="form-control" placeholder="Ingresa tu mensaje" style="height:200px;"></textarea>
+                                </div>
+                            </div>
+                            <p>
+                                <strong>Nota: </strong>Tu paquete llegara a tu dirección marcada como principal, para saber tu direccion principal ve a la pestaña "Mis Direcciones" o da clic <a href="/direcciones">aqui</a>
+                            </p>
+                            
+                        </div>
+                        <hr>
+                        <button type="button" class="btn" style="background-color: #99c21c; color: white;" onclick="registrarPaquete()">Registrar Paquete</button>		
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Container -->
+    
+</main>
+<script src="js/modulos/registroPaquete.js"></script>
+<script src="js/modulos/comun.js"></script>
+<script src="js/modulos/api.js"></script>
+
+
+
+	<!-- End main -->
+	
+	

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mvevip">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Citytours - Premium site template for city tours agencies, transfers and tickets.">
+    <meta name="author" content="Ansonika">
+    <title>CITY TOURS - City tours and travel site template by Ansonika</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- COMMON CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	
+    <link href="css/shop.css" rel="stylesheet">
+	
+	
+	<!-- CUSTOM CSS -->
+	<link href="css/custom.css" rel="stylesheet">
+    <base href="/">
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <!-- Header================================================== -->
+    <header>
+        <div id="top_line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6"><i class="icon-phone"></i><strong>0045 043204434</strong></div>
+                    <div class="col-6">
+                        <ul id="top_links">
+                            <li><a href="/login"><i class="icon-login" style="font-size: 16px;"></i>Ingresar</a></li>
+                            <!-- <li id="usuario_no_logeado"><a href="#" onclick="abrirModal(); return false;"><i class="icon-login" style="font-size: 16px;"></i>Ingresar</a></li>
+                            <li id="usuario_logeado"><i class="icon-user" style="font-size: 16px;"></i> David Proaño</li> -->
+                        </ul>
+                    </div>
+                </div><!-- End row -->
+            </div><!-- End container-->
+        </div><!-- End top line-->
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div id="logo_home">
+                    	<h1><a href="/home" title="City tours travel template">Vip Courier by Marketing Vip</a></h1>
+                    </div>
+                </div>
+                <nav class="col-9">
+                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
+                    <div class="main-menu">
+                        <div id="header_menu">
+                            <img src="img/logo_sticky.png" width="160" height="34" alt="City tours">
+                        </div>
+                        <a href="/home" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
+                        <ul>
+                            <li style="margin-right: 20px;">
+                                <a href="/" >Inicio</a>  
+                            </li>
+                            <li style="margin-right: 20px; display: none;" id="registroPaquetes">
+                                <a href="/registroPaquetes" >Registra Paquete</a>  
+                            </li>
+                            <li style="margin-right: 20px; display: none;" id="tusPaquetes">
+                                <a href="/paquetes" >Mis Paquetes</a>  
+                            </li>
+                            <li style="margin-right: 20px; display: none;" id="tusDirecciones">
+                                <a href="/direcciones" >Mis Direcciones</a>  
+                            </li>
+                            <li style="margin-right: 20px;" id="fqs">
+                                <a href="/FAQ" >FAQs</a>  
+                            </li>
+                            <li style="margin-right: 20px;" id="contactos">
+                                <a href="/contact" >Contáctanos</a>  
+                            </li>
+                            <li class="submenu" style="display: none;" id="perfil">
+                                <a href="javascript:void(0);" class="show-submenu">Mi Perfil <i class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="/cuenta"><i class="icon-cog-1" style="font-size: 16px;"></i>Mi Cuenta</a></li>
+                                    <li><a href="#" onclick="cerrarSesion(); return false;"><i class="icon-logout" style="font-size: 16px;"></i>Cerrar Sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div><!-- container -->
+    </header><!-- End Header -->
+
+    <style>
+        .my-confirm-button {
+            background-color: #99c21c; /* Cambia el color de fondo */
+            color: white; /* Cambia el color del texto */
+        }
+    </style>
+
+    <div class="modal fade" id="centermodal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">        
+                <div class="modal-body">
+                    <div class="col-12" style="display: flex; flex-direction: column; align-items: center; justify-content: center;" id="spinner">
+                        <div class="spinner-border avatar-lg m-2 spinner-cargando" role="status" style="color: #99c21c;"></div>
+                        <h4 class="spinner-cargando" id="mensajeSpinner" style="color: #99c21c;"></h4>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div  ng-view>
+
+    </div>
+
+    <div class="home4464-content">
+        <p style="font-size: 10px;">Marketing Vip - todos derechos reservados 2024</p>
+    </div>
+	
+	<footer class="revealed">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h3>¿Necesitas ayuda?</h3>
+                    <ul id="contact-info">
+                        <li class="mb-3"><i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 20px;"></i><a href="https://wa.me/+593993111114?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20tus%20servicios.%20Visto%20en:%20https%3A%2F%2Fmvevip.com" target="_blank">Envíanos un mensaje</a></li>
+                        <li class="mb-3"><i class="fas fa-phone-alt" style="font-size: 24px; margin-right: 20px;"></i><a href="tel://+59323815940" class="phone">Llámanos ahora</a></li>
+                        <li class="mb-3"><i class="fas fa-mail-bulk" style="font-size: 24px; margin-right: 20px;"></i><a href="mailto:info@mvevip.com?subject=Consulta&body=Hola, me gustaría obtener más información sobre...">Déjanos un email</a></li>
+                    </ul>
+                    
+                </div>
+                <div class="col-md-8" style="display: flex; justify-content: center; align-items: center;">
+                    <p><img src="img/tarjetas/tarjeta-blanco-31.png" width="231" height="30" alt="Image" class="img-fluid"></p>
+                    <p><img src="img/tarjetas/tarjeta blanco-34.png" width="231" height="30" alt="Image" class="img-fluid"></p>
+                    <p><img src="img/tarjetas/tarjeta blanco-32.png" width="231" height="30" alt="Image" class="img-fluid"></p>
+                    <p><img src="img/tarjetas/tarjeta blanco-33.png" width="231" height="30" alt="Image" class="img-fluid"></p>
+                </div>
+                <div class="col-md-2">
+                    <h3>Acerca</h3>
+                    <ul>
+                        <li><a href="/about">Sobre nosotros</a></li>
+                        <li><a href="/FAQ">FAQs</a></li>
+                        <li><a href="/contact">Contáctanos</a></li>
+                    </ul>
+                </div>           
+            </div><!-- End row -->
+            <div class="row"></div>
+				<div class="col-lg-12">
+					<div id="social_footer">
+						<ul>
+							<li>
+                                <a href="https://www.facebook.com/share/eAaQqQzrMvU7T4MV" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+							</li>
+							<li>
+                                <a href="https://www.tiktok.com/@marketingvipecuador" target="_blank">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </a>
+							</li>
+							<li>
+                                <a href="https://www.instagram.com/marketingvipecuador" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+							</li>
+							<li>
+                                <a href="https://www.youtube.com/channel/UCTb9vJwhQcB7Ea_1va1o7bg" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+							</li>
+						</ul>
+						<p>© MaketingVip 2024</p>
+					</div>
+				</div>
+			</div>
+        </div><!-- End container -->
+    </footer><!-- End footer -->
+
+	<div id="toTop"></div><!-- Back to top button -->
+	
+	<!-- Search Menu -->
+	<div class="search-overlay-menu">
+		<span class="search-overlay-close"><i class="icon_set_1_icon-77"></i></span>
+		<form role="search" id="searchform" method="get">
+			<input value="" name="q" type="text" placeholder="Search..." />
+			<button type="submit"><i class="icon_set_1_icon-78"></i>
+			</button>
+		</form>
+	</div><!-- End Search Menu -->
+	
+
+	<!-- Common scripts -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/common_scripts_min.js"></script>
+	<script src="js/functions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <script src="js/modulos/routes.js"></script>
+    <script src="js/modulos/login.js"></script>
+    <script src="js/modulos/api.js"></script>
+    <script src="js/modulos/comun.js"></script>
+
+
+    <script>
+        $(document).ready(e => {
+            verificarAutenticacion()
+        })
+    </script>
+
+  </body>
+</html>
