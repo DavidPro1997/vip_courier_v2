@@ -37,8 +37,8 @@ async function desarmarTrackings(paquetes){
         cerrarSpinner()
     }
     else{
-        mensajeUsuario("info", "Oooops....", "No se encontraron paquetes")
         cerrarSpinner()
+        mensajeUsuario("info", "Oooops....", "No se encontraron paquetes")
     }
     
 }
