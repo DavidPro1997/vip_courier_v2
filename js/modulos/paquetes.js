@@ -29,11 +29,18 @@ function consultarPaquetes(){
 
 async function desarmarTrackings(paquetes){
     datosGlobales = []
-    for (let element of paquetes) {
-        await consultarTrackings(element);  // Espera a que cada tracking se resuelva antes de continuar
+    if(paquetes){
+        for (let element of paquetes) {
+            await consultarTrackings(element);  // Espera a que cada tracking se resuelva antes de continuar
+        }
+        construirDom()
+        cerrarSpinner()
     }
-    construirDom()
-    cerrarSpinner()
+    else{
+        mensajeUsuario("info", "Oooops....", "No se encontraron paquetes")
+        cerrarSpinner()
+    }
+    
 }
 
 var datosGlobales = []
