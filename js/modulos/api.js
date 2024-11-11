@@ -1,4 +1,4 @@
-var apiCourier = "https://api.vipcourier.com.ec"
+
 
 function API_POST(campos, modulo, callback, log=true){
     var call = $.ajax({
