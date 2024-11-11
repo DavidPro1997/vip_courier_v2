@@ -34,12 +34,13 @@ async function desarmarTrackings(paquetes){
             await consultarTrackings(element);  // Espera a que cada tracking se resuelva antes de continuar
         }
         construirDom()
-        cerrarSpinner()
     }
     else{
-        cerrarSpinner()
         mensajeUsuario("info", "Oooops....", "No se encontraron paquetes")
     }
+    setTimeout(() => {
+        cerrarSpinner()
+    }, 1000);
     
 }
 
