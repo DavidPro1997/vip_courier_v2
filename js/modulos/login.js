@@ -4,6 +4,9 @@ function abrirModalOlvidePassword(){
 
 
 function conSesion(data){
+    $("#homeRegistrar").show()
+    $("#homePaquetes").show()
+    $("#homeDirecciones").show()
     $("#registroPaquetes").show()
     $("#tusPaquetes").show()
     $("#tusDirecciones").show()
@@ -19,6 +22,9 @@ function conSesion(data){
 
 
 function sinSesion(){
+    $("#homeRegistrar").hide()
+    $("#homePaquetes").hide()
+    $("#homeDirecciones").hide()
     $("#registroPaquetes").hide()
     $("#tusPaquetes").hide()
     $("#tusDirecciones").hide()
