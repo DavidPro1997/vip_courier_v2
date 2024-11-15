@@ -1,5 +1,5 @@
 
-	<section class="parallax-window" data-parallax="scroll" data-image-src="img/header_bg.jpg" data-natural-width="1400" data-natural-height="470" style="background-image: url('https://www.vidacamara.cl/images/default-source/default-album/puntos-de-contactos-header-min.png?sfvrsn=7354f8db_5');">
+	<section class="parallax-window" data-parallax="scroll" data-image-src="img/headers/contactanos.png" data-natural-width="1400" data-natural-height="470" style="background-image: url('img/headers/contactanos.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
 		<div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
 			<div class="animated fadeInDown">
 				<h1>Contactanos</h1>
@@ -97,23 +97,23 @@
 						<hr>
 						<h4 class="mb-3">Contactanos Aquí <span><i class="icon-chat"></i></span></h4>
 						<ul id="contact-info">
-							<li class="mb-3"><i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 20px;"></i><a href="https://wa.me/+593993111114?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20tus%20servicios.%20Visto%20en:%20https%3A%2F%2Fmvevip.com" target="_blank" style="color: #99c21c;">  Envíanos un mensaje</a></li>
-							<li class="mb-3"><i class="fas fa-phone-alt" style="font-size: 24px; margin-right: 20px;"></i><a href="tel://004542344599" class="phone" style="color: #99c21c;">Llámanos ahora</a></li>
-							<li class="mb-3"><i class="fas fa-mail-bulk" style="font-size: 24px; margin-right: 20px;"></i><a href="mailto:info@mvevip.com?subject=Consulta&body=Hola, me gustaría obtener más información sobre..." style="color: #99c21c;">Déjanos un email</a></li>
+							<li class="mb-3"><i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 20px;"></i><a href="#" onclick="abrirChatWhatsApp(); return false;" style="color: #99c21c;">  Envíanos un mensaje</a></li>
+							<li class="mb-3"><i class="fas fa-phone-alt" style="font-size: 24px; margin-right: 20px;"></i><a href="#" onclick="abrirLlamada(); return false;"  class="phone" style="color: #99c21c;">Llámanos ahora</a></li>
+							<li class="mb-3"><i class="fas fa-mail-bulk" style="font-size: 24px; margin-right: 20px;"></i><a href="#" onclick="enviarCorreo(); return false;" style="color: #99c21c;">Déjanos un email</a></li>
 						</ul>
 					</div>
 					<div class="box_style_4">
 						<h4>Siguenos en nuestras <span>redes</span></h4>
-						<a href="https://www.facebook.com/share/eAaQqQzrMvU7T4MV" target="_blank" style="color: rgb(29, 29, 171);">
+						<a href="#" onclick="abrirFacebook(); return false;" style="color: rgb(29, 29, 171);">
 							<i class="fab fa-facebook" style="margin-right: 25px;"></i>
 						</a>
-						<a href="https://www.tiktok.com/@marketingvipecuador" target="_blank" style="color: black;">
+						<a href="#" onclick="abrirTiktok(); return false;" style="color: black;">
 							<i class="fab fa-tiktok" style="margin-right: 25px;"></i>
 						</a>
-						<a href="https://www.instagram.com/marketingvipecuador" target="_blank">
+						<a href="#" onclick="abrirInstagram(); return false;">
 							<i class="fab fa-instagram" style="margin-right: 25px;"></i>
 						</a>
-						<a href="https://www.youtube.com/channel/UCTb9vJwhQcB7Ea_1va1o7bg" target="_blank" style="color: red;">
+						<a href="#" onclick="abrirYoutube(); return false;" style="color: red;">
 							<i class="fab fa-youtube" style="margin-right: 25px;"></i>
 						</a>
 					</div>
@@ -137,5 +137,14 @@
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.4036854164512!2d-79.89226729818418!3d-2.1565202516111985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6da3998df187%3A0x613ccdb5def5f9b2!2sEDIFICIO%20PROFESSIONAL%20CENTER!5e0!3m2!1ses!2sec!4v1726153874583!5m2!1ses!2sec" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>			 </div>
 		 </div>
 	</main>
+
+	<script src="js/functions.js"></script>
+
+	<script>
+        $(document).ready(e => {
+            scrollTop()
+        })
+    </script>
+	
 
 		

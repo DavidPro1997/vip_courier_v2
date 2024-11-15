@@ -58,6 +58,10 @@ function abrirLlamada(){
 }
 
 function enviarCorreo(asunto, cuerpo) {
+    if(!asunto || !cuerpo){
+        asunto = "Solicitud de Información"
+        cuerpo = "Hola, quisiera informacion sobre el servicio de Courier para Ecuador"
+    }
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
     window.location.href = mailtoLink;
 }

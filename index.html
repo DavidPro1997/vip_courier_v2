@@ -55,12 +55,10 @@
         <div id="top_line">
             <div class="container">
                 <div class="row">
-                    <div class="col-6"><i class="icon-phone"></i><strong>0045 043204434</strong></div>
+                    <div class="col-6"><a href="#" onclick="abrirChatWhatsApp(); return false;" style="color: inherit; text-decoration: none;"><i class="icon-phone"></i><strong id="numeroTelefono"></strong></a></div>
                     <div class="col-6">
                         <ul id="top_links">
                             <li><a href="/login"><i class="icon-login" style="font-size: 16px;"></i>Ingresar</a></li>
-                            <!-- <li id="usuario_no_logeado"><a href="#" onclick="abrirModal(); return false;"><i class="icon-login" style="font-size: 16px;"></i>Ingresar</a></li>
-                            <li id="usuario_logeado"><i class="icon-user" style="font-size: 16px;"></i> David Proaño</li> -->
                         </ul>
                     </div>
                 </div><!-- End row -->
@@ -148,9 +146,9 @@
                 <div class="col-md-2">
                     <h3>¿Necesitas ayuda?</h3>
                     <ul id="contact-info">
-                        <li class="mb-3"><i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 20px;"></i><a href="https://wa.me/+593993111114?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20tus%20servicios.%20Visto%20en:%20https%3A%2F%2Fmvevip.com" target="_blank">Envíanos un mensaje</a></li>
-                        <li class="mb-3"><i class="fas fa-phone-alt" style="font-size: 24px; margin-right: 20px;"></i><a href="tel://+59323815940" class="phone">Llámanos ahora</a></li>
-                        <li class="mb-3"><i class="fas fa-mail-bulk" style="font-size: 24px; margin-right: 20px;"></i><a href="mailto:info@mvevip.com?subject=Consulta&body=Hola, me gustaría obtener más información sobre...">Déjanos un email</a></li>
+                        <li class="mb-3"><i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 20px;"></i><a href="#" onclick="abrirChatWhatsApp(); return false;" style="color: inherit; text-decoration: none;">Envíanos un mensaje</a></li>
+                        <li class="mb-3"><i class="fas fa-phone-alt" style="font-size: 24px; margin-right: 20px;"></i><a href="#" onclick="abrirLlamada(); return false;" style="color: inherit; text-decoration: none;" class="phone">Llámanos ahora</a></li>
+                        <li class="mb-3"><i class="fas fa-mail-bulk" style="font-size: 24px; margin-right: 20px;"></i><a href="#" onclick="enviarCorreo(); return false;" style="color: inherit; text-decoration: none;" >Déjanos un email</a></li>
                     </ul>
                     
                 </div>
@@ -163,7 +161,7 @@
                 <div class="col-md-2">
                     <h3>Acerca</h3>
                     <ul>
-                        <li><a href="/about">Sobre nosotros</a></li>
+                        <li><a href="/home">Sobre nosotros</a></li>
                         <li><a href="/FAQ">FAQs</a></li>
                         <li><a href="/contact">Contáctanos</a></li>
                     </ul>
@@ -174,23 +172,23 @@
 					<div id="social_footer">
 						<ul>
 							<li>
-                                <a href="https://www.facebook.com/share/eAaQqQzrMvU7T4MV" target="_blank">
+                                <a href="#" onclick="abrirFacebook(); return false;">
                                     <i class="fab fa-facebook"></i>
                                 </a>
 							</li>
 							<li>
-                                <a href="https://www.tiktok.com/@marketingvipecuador" target="_blank">
+                                <a href="#" onclick="abrirTiktok(); return false;">
                                     <i class="fab fa-tiktok"></i>
                                 </a>
                             </a>
 							</li>
 							<li>
-                                <a href="https://www.instagram.com/marketingvipecuador" target="_blank">
+                                <a href="#" onclick="abrirInstagram(); return false;">
                                     <i class="fab fa-instagram"></i>
                                 </a>
 							</li>
 							<li>
-                                <a href="https://www.youtube.com/channel/UCTb9vJwhQcB7Ea_1va1o7bg" target="_blank">
+                                <a href="#" onclick="abrirYoutube(); return false;">
                                     <i class="fab fa-youtube"></i>
                                 </a>
 							</li>
@@ -236,6 +234,7 @@
     <script>
         $(document).ready(e => {
             verificarAutenticacion()
+            $("#numeroTelefono").html(obtenerNumero())
         })
     </script>
 

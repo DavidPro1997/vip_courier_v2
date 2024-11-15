@@ -175,8 +175,6 @@ function eliminarDireccion(id){
     });
 
 
-
-    
 }
 
 

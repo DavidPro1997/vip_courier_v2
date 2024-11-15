@@ -1,4 +1,4 @@
-<section class="parallax-window" data-parallax="scroll" data-image-src="img/home_bg_1.jpg" data-natural-width="1400" data-natural-height="470" style="background-image: url('https://networkon.io/wp-content/uploads/2024/06/courier-guide-1.png');">
+<section class="parallax-window" data-parallax="scroll" data-image-src="img/headers/faqs.jpg" data-natural-width="1400" data-natural-height="470" style="background-image: url('img/headers/faqs.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
 <div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
 	<div class="animated fadeInDown">
 		<h1>PREGUNTAS FREQUENTES</h1>
@@ -23,7 +23,6 @@
 <div class="container margin_60">
 	<div class="main_title">
 		<h2><span>VIP COURIER</span> </h2>
-		<P>By MARKETING VIP S.A.</P>
 	</div>
 	<div class="row">
 		<div class="col-lg-12" id="faq">
@@ -146,6 +145,7 @@
 
 	<!-- Fixed sidebar -->
 	<script src="js/theia-sticky-sidebar.js"></script>
+	<script src="js/functions.js"></script>
 	<script>
 		jQuery('#sidebar').theiaStickySidebar({
 			additionalMarginTop: 80
@@ -168,5 +168,8 @@
 			}
 		});
 
+		$(document).ready(e => {
+            scrollTop()
+        })
 		
 	</script>
