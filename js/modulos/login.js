@@ -2,6 +2,10 @@ function abrirModalOlvidePassword(){
     $("#scrollable-modal").modal('show')
 }
 
+function abrirModalPolitica(){
+    $("#modal-politica").modal('show')
+}
+
 
 function conSesion(data){
     $("#homeRegistrar").show()
@@ -44,15 +48,21 @@ function crearCuenta(){
         password1: document.getElementById("password1").value,
         password2: document.getElementById("password2").value
     }
-    API_POST(JSON.stringify(info), '/registrarUsuario', datos => {
-        if (datos.estado){
-            mensajeUsuario('sucess','¡Bien!',datos.mensaje)
-            mensajeUsuario('sucess','¡Bien!','Inicia sesión ahora')
-            window.location.href = "/login";
-        }else{
-            mensajeUsuario('info','Oops...',datos.mensaje)
-        }
-    })
+    const politica = document.getElementById("politica")
+    if (politica.checked){
+        API_POST(JSON.stringify(info), '/registrarUsuario', datos => {
+            if (datos.estado){
+                mensajeUsuario('sucess','¡Bien!',datos.mensaje)
+                mensajeUsuario('sucess','¡Bien!','Inicia sesión ahora')
+                window.location.href = "/login";
+            }else{
+                mensajeUsuario('info','Oops...',datos.mensaje)
+            }
+        })
+    }
+    else{
+        mensajeUsuario('info','Oops...','Debe aceptar la política de privacidad')
+    }
 
 }
 

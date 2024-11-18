@@ -1,5 +1,5 @@
-var numeroTelefono = "+593988182490"
-var email = "info@mvevip.com"
+var numeroTelefono = "+593969041581"
+var email = "pparedes@vipcourier.com.ec"
 var facebook = "https://www.facebook.com/share/eAaQqQzrMvU7T4MV"
 var instagram = "https://www.instagram.com/marketingvipecuador"
 var tiktok = "https://www.tiktok.com/@marketingvipecuador"
@@ -40,7 +40,7 @@ function scrollTop() {
 
 function abrirChatWhatsApp(mensaje) {
     if(!mensaje){
-        mensaje = "Hola quiero información sobre sus servicios..."
+        mensaje = "Hola quiero información sobre sus servicios de Courier..."
     }
     const mensajeCodificado = encodeURIComponent(mensaje);
     const url = `https://wa.me/${numeroTelefono}?text=${mensajeCodificado}`;
@@ -60,7 +60,7 @@ function abrirLlamada(){
 function enviarCorreo(asunto, cuerpo) {
     if(!asunto || !cuerpo){
         asunto = "Solicitud de Información"
-        cuerpo = "Hola, quisiera informacion sobre el servicio de Courier para Ecuador"
+        cuerpo = "Hola, quisiera información sobre el servicio de Courier para Ecuador"
     }
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
     window.location.href = mailtoLink;
