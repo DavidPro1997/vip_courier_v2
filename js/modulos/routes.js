@@ -54,6 +54,10 @@ app.config(['$routeProvider', '$locationProvider',function($routeProvider, $loca
             templateUrl : 'direcciones.html',
             controller : 'DireccionesController'
         })
+        .when('/clientes', {
+            templateUrl : 'clientes.html',
+            controller : 'ClientesController'
+        })
         .when('/cuenta', {
             templateUrl : 'cuenta.html',
             controller : 'CuentaController'
@@ -107,6 +111,10 @@ app.controller('DireccionesController', ['$scope', function($scope) {
 
 app.controller('CuentaController', ['$scope', function($scope) {
     $scope.message = 'Bienvenido a tu cuenta';
+}]);
+
+app.controller('ClientesController', ['$scope', function($scope) {
+    $scope.message = 'Bienvenido a los clientes';
 }]);
 
 

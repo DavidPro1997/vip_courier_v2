@@ -19,7 +19,7 @@ function enviarDatos(datos){
         API_POST(JSON.stringify(datos), '/ingresoPaquete', datos => {
             if (datos.estado) {
                 mensajeUsuario('success', 'Bien', datos.mensaje).then(() => {
-                    
+                    window.location.href = "/paquetes";
                 });
             } else {
                 mensajeUsuario('info', 'Oops...', datos.mensaje);

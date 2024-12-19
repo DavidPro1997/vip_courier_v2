@@ -15,6 +15,16 @@ function abrirSpinner(mensaje){
 }
 
 
+function validarArrayComun(obj) {
+    for (let key in obj) {
+        if (obj[key] === "" || obj[key] === null || obj[key] === undefined || obj[key] === false) {
+          return false; // Si algún valor está vacío o es false, retorna false
+        }
+      }
+      return true;
+  }
+
+
 function cerrarSpinner(){
     $("#centermodal").modal('hide');
 }

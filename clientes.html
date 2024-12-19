@@ -1,0 +1,62 @@
+
+
+<section class="parallax-window" data-parallax="scroll" data-image-src="img/headers/clientes.jpg" data-natural-width="1400" data-natural-height="470" style="background-image: url('img/headers/direccion.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+        <div class="animated fadeInDown">
+            <h1>CLIENTES</h1>
+            <p>Accede aquí a todas tus clientes</p>
+        </div>
+    </div>
+</section>
+    <!-- End section -->
+
+<main>
+	<div class="container margin_60">
+    
+        <div class="main_title">
+            <h2>Tus<span> clientes</span></h2>
+        </div>
+        <div class="row add_bottom_45">
+
+                <div class="col-lg-6 mb-3">
+                    <div class="form-group">
+                        <label>Tracking ID</label>
+                        <input type="text" class=" form-control"  placeholder="Escriba un TRACKING ID" id="trackingBuscar">
+                    </div>
+                </div>
+
+                <div class="col-lg-6" style="display: flex; align-items: end; justify-content: end;">
+                    <button type="button" class="btn" style="background-color: #99c21c; color: white;" onclick="buscarTracking()">Buscar</button>
+                </div>
+
+            <div class="col-md-12 mt-3">
+                <div class="table-responsive" style="overflow: visible;">
+                    <table class="table mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>TRACKING ID</th>
+                                <th>Datos cliente</th>
+                                <th>Dirección</th>
+                                <th>Voucher</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaClientes">
+                        </tbody>
+                    </table>
+                </div> <!-- end table-responsive-->
+            </div>
+        </div>
+	</div>
+</main>
+
+    <script src="js/modulos/clientes.js"></script>
+    <script src="js/functions.js"></script>
+    <script>
+        $(document).ready(e => {
+            consultarClientes()
+            scrollTop()
+        })
+    </script>
+	
+	
+	

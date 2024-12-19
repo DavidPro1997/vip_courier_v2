@@ -17,10 +17,11 @@ function conSesion(data){
     $("#fqs").show()
     $("#contactos").show()
     $("#perfil").show()
-    const nombre = data.nombre.split(' ')[0]
-    const apellido =  data.apellido.split(' ')[0]
-    texto = `<li><i class="icon-user" style="font-size: 16px;"></i>`+nombre+` `+apellido+`</li>`
+    texto = `<li><i class="icon-user" style="font-size: 16px;"></i>`+data.primerNombre+`</li>`
     $("#top_links").html(texto)
+    if(data.rol == 1){
+        $("#clientes").show()
+    }
 
 }
 
@@ -40,31 +41,76 @@ function sinSesion(){
 }
 
 
-function crearCuenta(){
+function crearArrayCuenta(){
     const info = {
-        nombre: document.getElementById("nombre").value,
-        apellido: document.getElementById("apellido").value,
+        primerNombre: document.getElementById("primerNombre").value,
+        segundoNombre: document.getElementById("segundoNombre").value,
+        primerApellido: document.getElementById("primerApellido").value,
+        segundoApellido: document.getElementById("segundoApellido").value,
+        cedula: document.getElementById("cedula").value,
         correo: document.getElementById("email").value,
+        telefono: document.getElementById("telefono").value,
+        fechaNacimiento: document.getElementById("fechaNacimiento").value,
         password1: document.getElementById("password1").value,
-        password2: document.getElementById("password2").value
+        password2: document.getElementById("password2").value,
+        politica: document.getElementById("politica").checked
     }
-    const politica = document.getElementById("politica")
-    if (politica.checked){
+    return info
+}
+
+
+function crearCuenta(){
+    const info = crearArrayCuenta()
+    if(validarArrayComun(info)){
+        API_POST(JSON.stringify(info), '/enviarCorreoVerificacion', datos => {
+            if (datos.estado){
+                $("#modalCorreo").modal("show")
+            }else{
+                mensajeUsuario('info','Oops...',datos.mensaje)
+            }
+        })
+
+    }else{
+        mensajeUsuario('info','Oops...','Debe llenar todos los campos')
+    }
+    
+}
+
+
+
+function guardarRegistro(){
+    const info = crearArrayCuenta()
+    info.codigo = document.getElementById("codigo").value
+    if(validarArrayComun()){
         API_POST(JSON.stringify(info), '/registrarUsuario', datos => {
             if (datos.estado){
-                mensajeUsuario('sucess','¡Bien!',datos.mensaje)
-                mensajeUsuario('sucess','¡Bien!','Inicia sesión ahora')
-                window.location.href = "/login";
+                mensajeUsuario('success','¡Bien!',datos.mensaje).then(e => {
+                    window.location.href = "/login";
+                })
             }else{
                 mensajeUsuario('info','Oops...',datos.mensaje)
             }
         })
     }
-    else{
-        mensajeUsuario('info','Oops...','Debe aceptar la política de privacidad')
-    }
-
 }
+
+
+function restablecerEmail(){
+    const info = {
+        correo : document.getElementById("emailResta").value
+    }
+    API_POST(JSON.stringify(info), '/restablecerPassword', datos => {
+        if (datos.estado){
+            mensajeUsuario('success','¡Bien!',datos.mensaje)
+        }else{
+            mensajeUsuario('info','Oops...',datos.mensaje)
+        }
+    })
+}
+
+
+
+
 
 function iniciarSesion(){
     const info = {

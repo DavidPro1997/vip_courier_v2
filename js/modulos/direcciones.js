@@ -12,7 +12,6 @@ function consultarDirecciones(){
         if (datos.estado) {
             armarDirecciones(datos.datos)
         } else {
-            mensajeUsuario('info', 'Oooops', datos.mensaje);
             const aux = []
             armarDirecciones(aux)
         }

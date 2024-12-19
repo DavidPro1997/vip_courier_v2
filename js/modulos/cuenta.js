@@ -1,7 +1,7 @@
 function verificarDatos() {
     API_GET(null, '/datosPersonales', datos => {
         if (datos.estado) {
-            armartitulo(datos.datos.nombre)
+            armartitulo(datos.datos.primerNombre)
             armarInformacion(datos.datos)
         } else {
             mensajeUsuario('info', 'Oooops', datos.mensaje);
@@ -10,8 +10,7 @@ function verificarDatos() {
 }
 
 function armartitulo(nombre){
-    const name = nombre.split(' ')[0]
-    $("#nombre").html("¡Hola "+name+"!")
+    $("#nombre").html("¡Hola "+nombre+"!")
 
 }
 
@@ -19,19 +18,23 @@ function armarInformacion(datos){
     let lista = ""
     lista += `
         <tr>
-            <td>Nombre</td>
-            <td>`+datos.nombre+`</td>         
+            <td>Cedula</td>
+            <td>`+datos.cedula+`</td>         
         </tr>
         <tr>
-            <td>Apellido</td>
-            <td>`+datos.apellido+`</td>          
+            <td>Nombres</td>
+            <td>`+datos.primerNombre+` `+datos.segundoNombre+`</td>         
+        </tr>
+        <tr>
+            <td>Apellidos</td>
+            <td>`+datos.primerApellido+`  `+datos.segundoApellido+`</td>          
         </tr>
         <tr>
             <td>Correo</td>
             <td>`+datos.correo+`</td>    
         </tr>
         <tr>
-            <td>Número de Teléfono</td>
+            <td>Teléfono</td>
             <td>`+datos.telefono+`</td>
         </tr>
         <tr>
@@ -134,13 +137,9 @@ function mostrarImagenDesdeBase64(base64String) {
 
 
 function editarPerfil() {
-    const nombres = document.getElementById("nombres").value;
-    const apellidos = document.getElementById("apellidos").value;
     const telefono = document.getElementById("telefono").value;
-    if(nombres && apellidos && telefono){
+    if(telefono){
         const info = {
-            nombres: nombres,
-            apellidos: apellidos,
             telefono : telefono
         };
         API_POST(JSON.stringify(info), '/editarDatosPersonales', datos => {
