@@ -33,9 +33,6 @@ async function desarmarTrackings(paquetes){
         }
         construirDom()
     }
-    else{
-        mensajeUsuario("info", "Oooops....", "No se encontraron paquetes")
-    }
     setTimeout(() => {
         cerrarSpinner()
     }, 1000);
