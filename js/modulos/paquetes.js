@@ -18,10 +18,8 @@ function consultarPaquetes(){
         if (datos.estado) {
             desarmarTrackings(datos.datos)
         } else {
-            mensajeUsuario('info', 'Oooops', datos.mensaje).then(() => {
-                cerrarSpinner()
-                window.location.href = "/home";
-            });
+            cerrarSpinner()
+           
         }
     });
 }
